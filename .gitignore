@@ -46,15 +46,6 @@ web/modules/*/.git
 config-dev
 config/local
 
-# User-defined ignores
-#.htaccess
-*.sql
-*.sql.gz
-*.mysql
-*.bak
-*.ignore
-*.tar
-*.gz
 
 # vim .swp files
 *.swp
