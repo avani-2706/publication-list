@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<div class="publication-list">
+  {% for key,row in rows %}
+    {%
+      set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+    %}
+
+    <div{{ row.attributes.addClass(row_classes) }}>
+
+      <div class="container">
+
+        <div class="category">
+          <div class="category__content">
+            <div class="category__image">
+                {{ view.style_plugin.getField(key, 'field_cover_image') }}
+            </div>
+            <div class="category__info">
+                <div class="category__tag">{{ view.style_plugin.getField(key, 'field_category') }}</div>
+                <h2>
+                    {{ view.style_plugin.getField(key, 'title') }}
+                </h2>
+                <div class="category__body">
+                    {{ view.style_plugin.getField(key, 'body') }}
+                </div>
+                <div class="category__lang">
+                    {{ view.style_plugin.getField(key, 'field_language') }}
+                </div>
+            </div>
+          </div>
+
+          <div class="categoty__publish-date">
+              {{ view.style_plugin.getField(key, 'field_published_date') }}
+          </div>
+        </div>  
+      </div>
+        
+    </div>
+  {% endfor %}
+</div>

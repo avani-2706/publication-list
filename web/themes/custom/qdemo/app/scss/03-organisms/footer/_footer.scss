@@ -1,0 +1,16 @@
+footer {
+  background-color: $secondary-1;
+  padding: 70px 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 0 5px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

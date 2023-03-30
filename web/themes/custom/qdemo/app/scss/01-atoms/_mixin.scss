@@ -1,0 +1,56 @@
+// Mixin and placeholder
+
+@mixin tagicon {
+  position: relative;
+  padding-left: 20px;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-image: url('../images/arrow-icon.png');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    transform: translateY(-50%);
+    content: '';
+  }
+}
+
+@mixin dateicon {
+  @include tagicon;
+
+  &:before {
+    background-image: url('../images/date-icon.png');
+  }
+}
+
+// Container
+%container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: 768px) {
+    max-width:720px
+  }
+
+  @media (min-width: 992px) {
+    max-width:960px
+  }
+
+  @media (min-width: 1200px) {
+    max-width:1170px
+  }
+}
+
+// Small container
+%sm-container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: 992px) {
+    max-width: 780px
+  }
+}

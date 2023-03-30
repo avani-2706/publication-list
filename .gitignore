@@ -1,0 +1,99 @@
+# Ignore configuration files that may contain sensitive information.
+web/sites/*/settings*.php
+private_files
+settings.php
+settings.local.php
+services.local.yml
+.editorconfig
+.gitattributes
+.gitignore
+web/.csslintrc
+web/.eslintignore
+web/.htaccess
+web/example.gitignore
+
+# Ignore paths that contain user-generated content.
+# Ignore configuration files that may contain sensitive information.
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+.sass-cache
+web/sites/default/settings.local.php
+web/sites/default/services.yml
+web/sites/development.services.yaml
+
+# Ignore drupal core.
+web/core
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+web/private
+
+# Ignore contrib modules. These should be created during build process.
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+
+# Ignore NetBeans settings
+web/nbproject
+web/nbproject/*
+web/modules/*/.git
+
+# Ignore development settings
+config-dev
+config/local
+
+# User-defined ignores
+#.htaccess
+*.sql
+*.sql.gz
+*.mysql
+*.bak
+*.ignore
+*.tar
+*.gz
+
+# vim .swp files
+*.swp
+
+# OS Files
+typescript
+.vagrant/
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+~*
+*~
+#.*
+!.gitignore
+
+# IDE files
+.project
+.komodoproject
+.kpf
+*.esproj
+.espressostorage
+*.tmproj
+*.tmproject
+tmtags
+*.sublime-workspace
+.idea/
+
+# Theme files
+node_modules
+package-lock.json
+
+#Composer vendor
+vendor/
+vendor/.git
